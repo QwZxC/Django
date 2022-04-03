@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Последние кринжи</title>
+</head>
+<body>
+    {%if latest_articles_list%}
+        {% for a in latest_articles_list %}
+            <a href="{%url 'detail' a.id%}"> {{a.title}}</a>
+        {% endfor %}
+    {%else%}
+        <h1>Статьи не найдены</h1>
+    {%endif%}
+</body>
+</html>
